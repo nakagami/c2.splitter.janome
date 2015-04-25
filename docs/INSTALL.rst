@@ -2,15 +2,10 @@ c2.splitter.janome Installation
 ================================
 
 Create a file called ``c2.splitter.janome-configure.zcml`` in the
-   ``/path/to/instance/etc/package-includes`` directory.  The file
-   should only contain this::
+``/path/to/instance/etc/package-includes`` directory.  The file
+should only contain this::
 
-       <include package="c2.splitter.janome" />
-
-.. _pythonproducts: http://plone.org/products/pythonproducts
-
-Alternatively, if you are using zc.buildout and the plone.recipe.zope2instance
-recipe to manage your project, you can do this:
+   <include package="c2.splitter.janome" />
 
 Add ``c2.splitter.janome`` to the list of eggs to install, e.g.::
 

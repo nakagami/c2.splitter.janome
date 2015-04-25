@@ -31,7 +31,7 @@ recipe to manage your project, you can do this:
         ...
         c2.splitter.janome
 
-  * Tell the plone.recipe.zope2instance recipe to install a ZCML slug::
+ * Tell the plone.recipe.zope2instance recipe to install a ZCML slug::
 
     [instance]
     recipe = plone.recipe.zope2instance
@@ -39,7 +39,7 @@ recipe to manage your project, you can do this:
     zcml =
         c2.splitter.janome
 
-  * Re-run buildout, e.g. with::
+ * Re-run buildout, e.g. with::
 
     $ ./bin/buildout
 

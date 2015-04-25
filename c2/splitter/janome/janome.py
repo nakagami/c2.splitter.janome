@@ -136,7 +136,7 @@ class C2TwoCharaSplitter(object):
 element_factory.registerFactory('Word Splitter',
                         'C2TwoCharaSplitter', C2TwoCharaSplitter)
 
-class C2TwoCharaNormalizer(object):
+class Normalizer(object):
 
     def process(self, lst):
         result = []

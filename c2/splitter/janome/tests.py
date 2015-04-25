@@ -12,7 +12,7 @@ from Products.CMFCore.utils import getToolByName
 
 ptc.setupPloneSite()
 
-import c2.splitter.twocharacters
+import c2.splitter.janome
 
 class TestCase(ptc.PloneTestCase):
     class layer(PloneSite):
@@ -20,7 +20,7 @@ class TestCase(ptc.PloneTestCase):
         def setUp(cls):
             fiveconfigure.debug_mode = True
             zcml.load_config('configure.zcml',
-                             c2.splitter.twocharacters)
+                             c2.splitter.janome)
             fiveconfigure.debug_mode = False
 
         @classmethod
@@ -50,19 +50,19 @@ class TestCanUseSpritter(TestCase):
         from Products.ZCTextIndex.OkapiIndex import OkapiIndex
         from Products.ZCTextIndex.ZCTextIndex import PLexicon
         from Products.ZCTextIndex.ZCTextIndex import ZCTextIndex
-        lexicon = PLexicon('c2chara_lexicon', '', c2.splitter.twocharacters.twochara.C2TwoCharaNormalizer())
-        cat._setObject('c2chara_lexicon', lexicon)
+        lexicon = PLexicon('janome_lexicon', '', c2.splitter.janome.janome.Normalizer())
+        cat._setObject('janome_lexicon', lexicon)
         i = ZCTextIndex('NounSearchableText', caller=cat,
                 index_factory=OkapiIndex,
                 lexicon_id=lexicon.id)
         cat.addIndex('NounSearchableText', i)
 
         self.failUnless('NounSearchableText' in cat.indexes())
-        self.failUnless('c2chara_lexicon' in
+        self.failUnless('janome_lexicon' in
                         [ix.getLexicon().id for ix in cat.index_objects()
                          if ix.id == 'NounSearchableText'])
 
-class TestTwoCharaFunctions(unittest.TestCase):
+class TestJanomeFunctions(unittest.TestCase):
     """Test for Functions"""
     def afterSetUp(self):
         pass
@@ -78,26 +78,7 @@ def test_suite():
     return unittest.TestSuite([
 
         unittest.makeSuite(TestCanUseSpritter),
-        unittest.makeSuite(TestTwoCharaFunctions),
-
-        # Unit tests
-        #doctestunit.DocFileSuite(
-        #    'README.txt', package='c2.splitter.twocharacters',
-        #    setUp=testing.setUp, tearDown=testing.tearDown),
-
-        #doctestunit.DocTestSuite(
-        #    module='c2.splitter.twocharacters.mymodule',
-        #    setUp=testing.setUp, tearDown=testing.tearDown),
-
-
-        # Integration tests that use PloneTestCase
-        #ztc.ZopeDocFileSuite(
-        #    'README.txt', package='c2.splitter.twocharacters',
-        #    test_class=TestCase),
-
-        #ztc.FunctionalDocFileSuite(
-        #    'browser.txt', package='c2.splitter.twocharacters',
-        #    test_class=TestCase),
+        unittest.makeSuite(TestJanomeFunctions),
 
         ])
 

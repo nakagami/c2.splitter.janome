@@ -1,7 +1,7 @@
 <configure
     xmlns="http://namespaces.zope.org/zope"
     xmlns:five="http://namespaces.zope.org/five"
-    i18n_domain="c2.splitter.twocharacters">
+    i18n_domain="c2.splitter.janome">
 
   <five:registerPackage package="." initialize=".initialize" />
 

@@ -1,4 +1,4 @@
-  c2.splitter.twocharacters is copyright Manabu TERADA
+  c2.splitter.janome is copyright Manabu TERADA, Hajime Nakagami
 
   This program is free software; you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by

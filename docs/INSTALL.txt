@@ -1,8 +1,8 @@
-c2.splitter.twocharacters Installation
-=======================
+c2.splitter.janome Installation
+================================
 
  * When you're reading this you have probably already run
-   ``easy_install c2.splitter.twocharacters``. Find out how to install setuptools
+   ``easy_install c2.splitter.janome``. Find out how to install setuptools
    (and EasyInstall) here:
    http://peak.telecommunity.com/DevCenter/EasyInstall
 
@@ -12,24 +12,24 @@ c2.splitter.twocharacters Installation
 
    into your Zope instance.
 
- * Create a file called ``c2.splitter.twocharacters-configure.zcml`` in the
+ * Create a file called ``c2.splitter.janome-configure.zcml`` in the
    ``/path/to/instance/etc/package-includes`` directory.  The file
    should only contain this::
 
-       <include package="c2.splitter.twocharacters" />
+       <include package="c2.splitter.janome" />
 
 .. _pythonproducts: http://plone.org/products/pythonproducts
 
 Alternatively, if you are using zc.buildout and the plone.recipe.zope2instance
 recipe to manage your project, you can do this:
 
- * Add ``c2.splitter.twocharacters`` to the list of eggs to install, e.g.:
+ * Add ``c2.splitter.janome`` to the list of eggs to install, e.g.:
 
     [buildout]
     ...
     eggs =
         ...
-        c2.splitter.twocharacters
+        c2.splitter.janome
 
   * Tell the plone.recipe.zope2instance recipe to install a ZCML slug:
 
@@ -37,7 +37,7 @@ recipe to manage your project, you can do this:
     recipe = plone.recipe.zope2instance
     ...
     zcml =
-        c2.splitter.twocharacters
+        c2.splitter.janome
 
   * Re-run buildout, e.g. with:
 

@@ -16,7 +16,6 @@ c2/splitter/janome/configure.zcml
 c2/splitter/janome/tests.py
 c2/splitter/janome/janome.py
 c2/splitter/janome/version.txt
-docs/HISTORY.txt
 docs/INSTALL.txt
 docs/LICENSE.GPL
 docs/LICENSE.txt

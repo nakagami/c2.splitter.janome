@@ -1,7 +1,7 @@
 c2.splitter.janome Installation
 ================================
 
-* Create a file called ``c2.splitter.janome-configure.zcml`` in the
+Create a file called ``c2.splitter.janome-configure.zcml`` in the
    ``/path/to/instance/etc/package-includes`` directory.  The file
    should only contain this::
 
@@ -12,7 +12,7 @@ c2.splitter.janome Installation
 Alternatively, if you are using zc.buildout and the plone.recipe.zope2instance
 recipe to manage your project, you can do this:
 
-* Add ``c2.splitter.janome`` to the list of eggs to install, e.g.::
+Add ``c2.splitter.janome`` to the list of eggs to install, e.g.::
 
    [buildout]
    ...
@@ -20,7 +20,7 @@ recipe to manage your project, you can do this:
        ...
        c2.splitter.janome
 
-* Tell the plone.recipe.zope2instance recipe to install a ZCML slug::
+Tell the plone.recipe.zope2instance recipe to install a ZCML slug::
 
    [instance]
    recipe = plone.recipe.zope2instance
@@ -28,7 +28,7 @@ recipe to manage your project, you can do this:
    zcml =
         c2.splitter.janome
 
-* Re-run buildout, e.g. with::
+Re-run buildout, e.g. with::
 
    $ ./bin/buildout
 

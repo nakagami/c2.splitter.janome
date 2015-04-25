@@ -1,5 +1,5 @@
 MANIFEST.in
-README.txt
+README.rst
 setup.py
 c2/__init__.py
 c2.splitter.janome.egg-info/PKG-INFO

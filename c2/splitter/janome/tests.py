@@ -63,7 +63,7 @@ class TestJanomeFunctions(unittest.TestCase):
         pass
 
     def test_process_str(self):
-        process_str = c2.splitter.twocharacters.twochara.process_str
+        process_str = c2.splitter.janome.janome.process_str
         txt = "This is a Plone symposium Tokyo site."
         result = ["Th", "hi" , "is", "s", "is", "s", "a", "Pl", "lo", "on"]
         self.assertEqual(process_str(txt, 'utf-8')[:10], result)

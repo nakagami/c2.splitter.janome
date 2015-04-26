@@ -62,12 +62,12 @@ class TestJanomeFunctions(unittest.TestCase):
     def afterSetUp(self):
         pass
 
-    def test_process_str(self):
-        process_str = c2.splitter.janome.janome.process_str
-        txt = "This is a Plone symposium Tokyo site."
-        result = ["Th", "hi" , "is", "s", "is", "s", "a", "Pl", "lo", "on"]
-        self.assertEqual(process_str(txt, 'utf-8')[:10], result)
-
+    def test_process_unicode(self):
+        process_unicode = c2.splitter.janome.janome.process_unicode
+        self.assertEqual(process_unicode(
+            u"ここはPloneシンポジウムのサイトです",
+            ['ここ', 'は', 'Plone', 'シンポジウム', 'の', 'サイト', 'です'])
+        )
 
 def test_suite():
     return unittest.TestSuite([

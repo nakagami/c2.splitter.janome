@@ -37,12 +37,7 @@ class TestCanUseSpritter(TestCase):
         from Products.ZCTextIndex.PipelineFactory import element_factory
         group = 'Word Splitter'
         names = element_factory.getFactoryNames(group)
-        self.failUnless('C2TwoCharaSplitter' in names)
-
-        group = 'Case Normalizer'
-        names = element_factory.getFactoryNames(group)
-        self.failUnless('C2TwoChara Case Normalizer' in names)
-
+        self.failUnless('JanomeSplitter' in names)
 
     def testNounSearchableText(self):
         cat = getToolByName(self.portal, 'portal_catalog')

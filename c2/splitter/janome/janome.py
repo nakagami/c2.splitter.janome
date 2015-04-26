@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import re
 import unicodedata
+import janome
 
 from Products.ZCTextIndex.ISplitter import ISplitter
 from Products.ZCTextIndex.PipelineFactory import element_factory
@@ -103,7 +104,7 @@ def process_str_post(s, enc):
         return s.replace("?", "").replace("*", "")
 
 
-class C2TwoCharaSplitter(object):
+class JanomeSplitter(object):
     """
     2 character Splitter
     """
@@ -134,24 +135,4 @@ class C2TwoCharaSplitter(object):
         return result
 
 element_factory.registerFactory('Word Splitter',
-                        'C2TwoCharaSplitter', C2TwoCharaSplitter)
-
-class Normalizer(object):
-
-    def process(self, lst):
-        result = []
-        for s in lst:
-            # This is a hack to get the normalizer working with
-            # non-unicode text.
-            try:
-                if not isinstance(s, unicode):
-                    s = unicode(s, ENC)
-            except (UnicodeDecodeError, TypeError):
-                result.append(s.lower())
-            else:
-                normalized = unicodedata.normalize('NFKC', s)
-                result.append(normalized.lower().encode(ENC))
-        return result
-
-element_factory.registerFactory('Case Normalizer',
-        'C2TwoChara Case Normalizer', C2TwoCharaNormalizer)
+                        'JanomeSplitter', JanomeSplitter)

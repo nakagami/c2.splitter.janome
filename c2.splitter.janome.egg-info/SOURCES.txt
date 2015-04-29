@@ -1,5 +1,6 @@
 MANIFEST.in
 README.rst
+setup.cfg
 setup.py
 c2/__init__.py
 c2.splitter.janome.egg-info/PKG-INFO
@@ -13,9 +14,8 @@ c2.splitter.janome.egg-info/top_level.txt
 c2/splitter/__init__.py
 c2/splitter/janome/__init__.py
 c2/splitter/janome/configure.zcml
-c2/splitter/janome/tests.py
 c2/splitter/janome/janome.py
+c2/splitter/janome/tests.py
 c2/splitter/janome/version.txt
-docs/INSTALL.txt
 docs/LICENSE.GPL
 docs/LICENSE.txt

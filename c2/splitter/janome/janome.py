@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
 from __future__ import absolute_import
-import re
-import unicodedata
 from janome.tokenizer import Tokenizer
 
 from Products.ZCTextIndex.ISplitter import ISplitter

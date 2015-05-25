@@ -11,6 +11,7 @@ setup(name='c2.splitter.janome',
       # http://pypi.python.org/pypi?:action=list_classifiers
       classifiers=[
         "Framework :: Plone",
+        "Framework :: Zope2",
         "Programming Language :: Python",
         ],
       keywords='plone splitter',
